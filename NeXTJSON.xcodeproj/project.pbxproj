@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		9DF326FB1DECE3C6009A9CEF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DF326F81DECE3C6009A9CEF /* Info.plist */; };
 		9DF326FE1DECE3E4009A9CEF /* NeXTJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF326FD1DECE3E4009A9CEF /* NeXTJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9DF3271B1DECE484009A9CEF /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 9DF327041DECE484009A9CEF /* cJSON.c */; };
+		9DF3271C1DECE484009A9CEF /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF327051DECE484009A9CEF /* cJSON.h */; };
+		9DF3271D1DECE484009A9CEF /* cJSON_Utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 9DF327061DECE484009A9CEF /* cJSON_Utils.c */; };
+		9DF3271E1DECE484009A9CEF /* cJSON_Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF327071DECE484009A9CEF /* cJSON_Utils.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		9DF326EC1DECE3AB009A9CEF /* NeXTJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeXTJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF326F81DECE3C6009A9CEF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DF326FD1DECE3E4009A9CEF /* NeXTJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeXTJSON.h; sourceTree = "<group>"; };
+		9DF327041DECE484009A9CEF /* cJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON.c; sourceTree = "<group>"; };
+		9DF327051DECE484009A9CEF /* cJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON.h; sourceTree = "<group>"; };
+		9DF327061DECE484009A9CEF /* cJSON_Utils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = cJSON_Utils.c; sourceTree = "<group>"; };
+		9DF327071DECE484009A9CEF /* cJSON_Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cJSON_Utils.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,7 +40,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF326FA1DECE3C6009A9CEF /* Sources */,
-				9DF327001DECE401009A9CEF /* Libraries */,
+				9DF327011DECE484009A9CEF /* Libraries */,
 				9DF326F71DECE3C6009A9CEF /* Resources */,
 				9DF326ED1DECE3AB009A9CEF /* Products */,
 			);
@@ -62,11 +70,23 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		9DF327001DECE401009A9CEF /* Libraries */ = {
+		9DF327011DECE484009A9CEF /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				9DF327021DECE484009A9CEF /* cJSON */,
 			);
-			name = Libraries;
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		9DF327021DECE484009A9CEF /* cJSON */ = {
+			isa = PBXGroup;
+			children = (
+				9DF327051DECE484009A9CEF /* cJSON.h */,
+				9DF327041DECE484009A9CEF /* cJSON.c */,
+				9DF327071DECE484009A9CEF /* cJSON_Utils.h */,
+				9DF327061DECE484009A9CEF /* cJSON_Utils.c */,
+			);
+			path = cJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,7 +96,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF3271C1DECE484009A9CEF /* cJSON.h in Headers */,
 				9DF326FE1DECE3E4009A9CEF /* NeXTJSON.h in Headers */,
+				9DF3271E1DECE484009A9CEF /* cJSON_Utils.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +172,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF3271B1DECE484009A9CEF /* cJSON.c in Sources */,
+				9DF3271D1DECE484009A9CEF /* cJSON_Utils.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
