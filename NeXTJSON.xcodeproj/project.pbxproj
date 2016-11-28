@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9DF326FB1DECE3C6009A9CEF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9DF326F81DECE3C6009A9CEF /* Info.plist */; };
 		9DF326FE1DECE3E4009A9CEF /* NeXTJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF326FD1DECE3E4009A9CEF /* NeXTJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DF3271B1DECE484009A9CEF /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 9DF327041DECE484009A9CEF /* cJSON.c */; };
 		9DF3271C1DECE484009A9CEF /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF327051DECE484009A9CEF /* cJSON.h */; };
@@ -161,7 +160,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF326FB1DECE3C6009A9CEF /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
