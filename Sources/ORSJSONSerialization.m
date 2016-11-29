@@ -95,8 +95,7 @@
 + (NSDictionary *)dictionaryFromCJSONObject:(cJSON *)cJSONObj
 {
     if (cJSONObj->type != cJSON_Object) { return nil; }
-    if (cJSONObj->string != NULL) { return nil; }
-    
+	
     NSMutableDictionary *result = [NSMutableDictionary dictionary];
     
     cJSON *obj;
