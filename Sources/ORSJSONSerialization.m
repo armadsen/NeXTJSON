@@ -75,7 +75,7 @@
     if (cJSONObj->type != cJSON_String) { return nil; }
     if (!cJSONObj->valuestring) { return nil; }
     
-    return [[NSString alloc] initWithCString:cJSONObj->valuestring encoding:NSUTF8StringEncoding];
+    return [[[NSString alloc] initWithCString:cJSONObj->valuestring encoding:NSUTF8StringEncoding] autorelease];
 }
 
 + (NSArray *)arrayFromCJSONArray:(cJSON *)cJSONObj
