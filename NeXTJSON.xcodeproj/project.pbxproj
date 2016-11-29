@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2337CB1DED1E710073D67E /* tests in Resources */ = {isa = PBXBuildFile; fileRef = 9D2337CA1DED1E710073D67E /* tests */; };
 		9DF326FE1DECE3E4009A9CEF /* NeXTJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF326FD1DECE3E4009A9CEF /* NeXTJSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9DF3271B1DECE484009A9CEF /* cJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = 9DF327041DECE484009A9CEF /* cJSON.c */; };
 		9DF3271C1DECE484009A9CEF /* cJSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 9DF327051DECE484009A9CEF /* cJSON.h */; };
@@ -16,13 +17,6 @@
 		9DF327331DECE609009A9CEF /* ORSJSONSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF327311DECE609009A9CEF /* ORSJSONSerialization.m */; };
 		9DF3273B1DECEACD009A9CEF /* NeXTJSONTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9DF3273A1DECEACD009A9CEF /* NeXTJSONTests.m */; };
 		9DF3273D1DECEACD009A9CEF /* NeXTJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DF326EC1DECE3AB009A9CEF /* NeXTJSON.framework */; };
-		9DF3274B1DECEC65009A9CEF /* test1 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF327441DECEC65009A9CEF /* test1 */; };
-		9DF3274C1DECEC65009A9CEF /* test2 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF327451DECEC65009A9CEF /* test2 */; };
-		9DF3274D1DECEC65009A9CEF /* test3 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF327461DECEC65009A9CEF /* test3 */; };
-		9DF3274E1DECEC65009A9CEF /* test4 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF327471DECEC65009A9CEF /* test4 */; };
-		9DF3274F1DECEC65009A9CEF /* test5 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF327481DECEC65009A9CEF /* test5 */; };
-		9DF327501DECEC65009A9CEF /* test6 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF327491DECEC65009A9CEF /* test6 */; };
-		9DF327511DECEC65009A9CEF /* test7 in Resources */ = {isa = PBXBuildFile; fileRef = 9DF3274A1DECEC65009A9CEF /* test7 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D2337CA1DED1E710073D67E /* tests */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tests; path = Libraries/cJSON/tests; sourceTree = SOURCE_ROOT; };
 		9DF326EC1DECE3AB009A9CEF /* NeXTJSON.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NeXTJSON.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF326F81DECE3C6009A9CEF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DF326FD1DECE3E4009A9CEF /* NeXTJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NeXTJSON.h; sourceTree = "<group>"; };
@@ -48,13 +43,6 @@
 		9DF327381DECEACD009A9CEF /* NeXTJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NeXTJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9DF3273A1DECEACD009A9CEF /* NeXTJSONTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NeXTJSONTests.m; sourceTree = "<group>"; };
 		9DF3273C1DECEACD009A9CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9DF327441DECEC65009A9CEF /* test1 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test1; sourceTree = "<group>"; };
-		9DF327451DECEC65009A9CEF /* test2 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test2; sourceTree = "<group>"; };
-		9DF327461DECEC65009A9CEF /* test3 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test3; sourceTree = "<group>"; };
-		9DF327471DECEC65009A9CEF /* test4 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test4; sourceTree = "<group>"; };
-		9DF327481DECEC65009A9CEF /* test5 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test5; sourceTree = "<group>"; };
-		9DF327491DECEC65009A9CEF /* test6 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test6; sourceTree = "<group>"; };
-		9DF3274A1DECEC65009A9CEF /* test7 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test7; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,26 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				9DF3273A1DECEACD009A9CEF /* NeXTJSONTests.m */,
-				9DF327431DECEC65009A9CEF /* tests */,
+				9D2337CA1DED1E710073D67E /* tests */,
 				9DF3273C1DECEACD009A9CEF /* Info.plist */,
 			);
 			path = NeXTJSONTests;
 			sourceTree = "<group>";
-		};
-		9DF327431DECEC65009A9CEF /* tests */ = {
-			isa = PBXGroup;
-			children = (
-				9DF327441DECEC65009A9CEF /* test1 */,
-				9DF327451DECEC65009A9CEF /* test2 */,
-				9DF327461DECEC65009A9CEF /* test3 */,
-				9DF327471DECEC65009A9CEF /* test4 */,
-				9DF327481DECEC65009A9CEF /* test5 */,
-				9DF327491DECEC65009A9CEF /* test6 */,
-				9DF3274A1DECEC65009A9CEF /* test7 */,
-			);
-			name = tests;
-			path = Libraries/cJSON/tests;
-			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -262,13 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9DF327511DECEC65009A9CEF /* test7 in Resources */,
-				9DF3274D1DECEC65009A9CEF /* test3 in Resources */,
-				9DF3274E1DECEC65009A9CEF /* test4 in Resources */,
-				9DF3274F1DECEC65009A9CEF /* test5 in Resources */,
-				9DF327501DECEC65009A9CEF /* test6 in Resources */,
-				9DF3274B1DECEC65009A9CEF /* test1 in Resources */,
-				9DF3274C1DECEC65009A9CEF /* test2 in Resources */,
+				9D2337CB1DED1E710073D67E /* tests in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +456,7 @@
 				9DF327421DECEACD009A9CEF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
