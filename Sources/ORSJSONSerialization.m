@@ -9,12 +9,22 @@
 #import "ORSJSONSerialization.h"
 #import "cJSON.h"
 
+@interface ORSJSONSerialization (Private)
+
++ (id)foundationObjectFromCJSONObject:(cJSON *)cJSON;
++ (NSNumber *)numberFromCJSONNumber:(cJSON *)cJSONObj;
++ (NSString *)stringFromCJSONString:(cJSON *)cJSONObj;
++ (NSArray *)arrayFromCJSONArray:(cJSON *)cJSONObj;
++ (NSDictionary *)dictionaryFromCJSONObject:(cJSON *)cJSONObj;
+
+@end
+
 @implementation ORSJSONSerialization
 
 + (id)JSONObjectWithData:(NSData *)data options:(ORSJSONReadingOptions)options
 {
     NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-    cJSON *root = cJSON_Parse([string cStringUsingEncoding:NSUTF8StringEncoding]);
+    cJSON *root = cJSON_Parse([string cString]);
     
     [string release];
     if (!root) { return nil; }
@@ -41,7 +51,7 @@
             return [NSNumber numberWithBool:YES];
             break;
         case cJSON_NULL:
-            return [NSNull null];
+            return [NSNumber numberWithInt:0];
             break;
         case cJSON_Number:
             return [self numberFromCJSONNumber:cJSON];
@@ -74,16 +84,18 @@
 {
     if (cJSONObj->type != cJSON_String) { return nil; }
     if (!cJSONObj->valuestring) { return nil; }
-    
-    return [[[NSString alloc] initWithCString:cJSONObj->valuestring encoding:NSUTF8StringEncoding] autorelease];
+
+    return [NSString stringWithCString:cJSONObj->valuestring];
 }
 
 + (NSArray *)arrayFromCJSONArray:(cJSON *)cJSONObj
 {
-    if (cJSONObj->type != cJSON_Array) { return nil; }
+    NSMutableArray *result = nil;
+    cJSON *obj = NULL;
     
-    NSMutableArray *result = [NSMutableArray array];
-    cJSON *obj;
+    if (cJSONObj->type != cJSON_Array) { return nil; }
+
+    result = [[[NSMutableArray alloc] init] autorelease];
     cJSON_ArrayForEach(obj, cJSONObj) {
         id foundationObject = [self foundationObjectFromCJSONObject:obj];
         if (foundationObject) { [result addObject:foundationObject]; }
@@ -94,13 +106,15 @@
 
 + (NSDictionary *)dictionaryFromCJSONObject:(cJSON *)cJSONObj
 {
+    NSMutableDictionary *result = nil;
+    cJSON *obj = NULL;
+    
     if (cJSONObj->type != cJSON_Object) { return nil; }
 	
-    NSMutableDictionary *result = [NSMutableDictionary dictionary];
+    result = [NSMutableDictionary dictionary];
     
-    cJSON *obj;
     cJSON_ArrayForEach(obj, cJSONObj) {
-        NSString *key = [[NSString alloc] initWithCString:obj->string encoding:NSUTF8StringEncoding];
+        NSString *key = [[NSString alloc] initWithCString:obj->string];
         id value = [self foundationObjectFromCJSONObject:obj];
         if (key && value) { [result setObject:value forKey:key]; }
         [key release];
