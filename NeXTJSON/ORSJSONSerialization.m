@@ -49,12 +49,16 @@
             break;
         case cJSON_True:
             return [NSNumber numberWithBool:YES];
-            break;
-        case cJSON_NULL:
-            return [NSNumber numberWithInt:0];
-            break;
-        case cJSON_Number:
-            return [self numberFromCJSONNumber:cJSON];
+			break;
+		case cJSON_NULL:
+			if (NSClassFromString(@"NSNull")) {
+				return [[NSClassFromString(@"NSNull") alloc] init];
+			} else {
+				return [NSNumber numberWithInt:0];
+			}
+			break;
+		case cJSON_Number:
+			return [self numberFromCJSONNumber:cJSON];
             break;
         case cJSON_String:
             return [self stringFromCJSONString:cJSON];
